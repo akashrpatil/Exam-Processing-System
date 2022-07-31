@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="seating_arrangeDataSet3" targetNamespace="http://tempuri.org/seating_arrangeDataSet3.xsd" xmlns:mstns="http://tempuri.org/seating_arrangeDataSet3.xsd" xmlns="http://tempuri.org/seating_arrangeDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="seating_arrangeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="seating_arrangeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.seating_arrangeConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="classroomTableAdapter" GeneratorDataComponentClassName="classroomTableAdapter" Name="classroom" UserDataComponentName="classroomTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="seating_arrangeConnectionString (Settings)" DbObjectName="seating_arrange.classroom" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `room_no`, `no_of_benches`, `status` FROM `classroom`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="room_no" DataSetColumn="room_no" />
+              <Mapping SourceColumn="no_of_benches" DataSetColumn="no_of_benches" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="seating_arrangeDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="seating_arrangeDataSet3" msprop:Generator_UserDSName="seating_arrangeDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="classroom" msprop:Generator_TableClassName="classroomDataTable" msprop:Generator_TableVarName="tableclassroom" msprop:Generator_TablePropName="classroom" msprop:Generator_RowDeletingName="classroomRowDeleting" msprop:Generator_RowChangingName="classroomRowChanging" msprop:Generator_RowEvHandlerName="classroomRowChangeEventHandler" msprop:Generator_RowDeletedName="classroomRowDeleted" msprop:Generator_UserTableName="classroom" msprop:Generator_RowChangedName="classroomRowChanged" msprop:Generator_RowEvArgName="classroomRowChangeEvent" msprop:Generator_RowClassName="classroomRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="room_no" msprop:Generator_ColumnVarNameInTable="columnroom_no" msprop:Generator_ColumnPropNameInRow="room_no" msprop:Generator_ColumnPropNameInTable="room_noColumn" msprop:Generator_UserColumnName="room_no" type="xs:int" minOccurs="0" />
+              <xs:element name="no_of_benches" msprop:Generator_ColumnVarNameInTable="columnno_of_benches" msprop:Generator_ColumnPropNameInRow="no_of_benches" msprop:Generator_ColumnPropNameInTable="no_of_benchesColumn" msprop:Generator_UserColumnName="no_of_benches" type="xs:int" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
